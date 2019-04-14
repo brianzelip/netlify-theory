@@ -68,6 +68,10 @@ talks
 <a href="/talks/using-github/">Using Github</a>
 ```
 
+3. Create appropriate rewrites via \_redirects. Read [the docs](https://www.netlify.com/docs/redirects/#rewrites-and-proxying). Test them via [redirect playground](https://play.netlify.com/redirects)
+
+4. Include \_redirects in build! See [my face palm post](https://community.netlify.com/t/error-proxying-to-deploy-multiple-repos-in-single-site/303/4?u=brianzelip) that happened because of not including it in the build.
+
 #### 1.1.a.2 Avoid Netlify's "finicky" redirects - push as little as possible!
 
 Redirects can be "finicky", as a support rep mentioned to me. I've experienced the system not working and thought I did something wrong, only to trigger a new deploy (reboot netlify) and then find it working as expected. I imagine this finicky behavior is similiar to the lag experienced from updating DNS info. It's likely best to push the least often, or else you'll have to reboot quite a bit, and feel like the sky is falling quite a bit too.
